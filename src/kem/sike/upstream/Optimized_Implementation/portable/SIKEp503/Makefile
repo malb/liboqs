@@ -2,7 +2,7 @@
 
 OPT=-O3     # Optimization option by default
 
-CC=gcc
+# CC=gcc
 ifeq "$(CC)" "gcc"
     COMPILER=gcc
 else ifeq "$(CC)" "clang"
