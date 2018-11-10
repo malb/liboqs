@@ -1,4 +1,3 @@
-CC=/usr/bin/gcc
 CFLAGS=-no-pie -O3 -mavx2
 LDFLAGS=-lcrypto
 

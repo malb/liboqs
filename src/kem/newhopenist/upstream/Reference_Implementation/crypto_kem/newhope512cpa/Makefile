@@ -1,4 +1,3 @@
-CC=/usr/bin/gcc
 LDFLAGS=-lcrypto
 
 SOURCES= cpapke.c fips202.c kem.c ntt.c poly.c PQCgenKAT_kem.c precomp.c reduce.c rng.c verify.c
