@@ -1,5 +1,5 @@
-liboqs nist-branch snapshot 2018-11-rc3
-=======================================
+liboqs nist-branch snapshot 2018-11
+===================================
 
 About
 -----
@@ -19,8 +19,7 @@ This branch of liboqs can be used with the following Open Quantum Safe applicati
 Release notes
 =============
 
-**This is a release candidate for liboqs nist-branch, not a final release.**
-This snapshot of nist-branch was released on TODO.  Its release page on Github is TODO.
+This snapshot of nist-branch was released on November 13, 2018.  Its release page on Github is https://github.com/open-quantum-safe/liboqs/releases/tag/nist-branch-snapshot-2018-11.
 
 What's New
 ----------
