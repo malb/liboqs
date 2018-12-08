@@ -17,7 +17,8 @@ OQS_API const char *OQS_KEM_alg_identifier(size_t i) {
 	    OQS_KEM_alg_newhope_512_cca_kem, OQS_KEM_alg_newhope_1024_cca_kem,
 	    OQS_KEM_alg_saber_light_saber_kem, OQS_KEM_alg_saber_saber_kem, OQS_KEM_alg_saber_fire_saber_kem,
 	    OQS_KEM_alg_sike_p503, OQS_KEM_alg_sike_p751,
-	    OQS_KEM_alg_titanium_cca_std_kem, OQS_KEM_alg_titanium_cca_hi_kem, OQS_KEM_alg_titanium_cca_med_kem, OQS_KEM_alg_titanium_cca_super_kem};
+	    OQS_KEM_alg_titanium_cca_std_kem, OQS_KEM_alg_titanium_cca_hi_kem, OQS_KEM_alg_titanium_cca_med_kem, OQS_KEM_alg_titanium_cca_super_kem,
+		OQS_ENABLE_KEM_lac_512_cca_kem};
 	if (i >= OQS_KEM_algs_length) {
 		return NULL;
 	} else {
@@ -295,6 +296,13 @@ OQS_API OQS_KEM *OQS_KEM_new(const char *method_name) {
 	} else if (0 == strcasecmp(method_name, OQS_KEM_alg_titanium_cca_hi_kem)) {
 #ifdef OQS_ENABLE_KEM_titanium_cca_hi_kem
 		return OQS_KEM_titanium_cca_hi_new();
+#else
+		return NULL;
+#endif
+		// EDIT-WHEN-ADDING-KEM
+	} else if (0 == strcasecmp(method_name, OQS_KEM_alg_lac_512_cca_kem)) {
+#ifdef OQS_ENABLE_KEM_lac_512_cca_kem
+		return OQS_KEM_lac_512_cca_kem_new();
 #else
 		return NULL;
 #endif
